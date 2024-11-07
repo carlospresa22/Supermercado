@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("/public/Super.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.boton-item {
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.productos,
+.carrito {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.productos h2,
+.carrito h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.productos ul li,
+.carrito ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.productos ul li,
+.carrito ul li {
+  border-bottom: none;
+}
+
+.total {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensaje {
+  color: #ef0505;
+  font-weight: bold;
+  margin-top: 10px;
+}
