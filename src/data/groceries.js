@@ -3,7 +3,6 @@ const groceries = [
     id: 1,
     name: "Frutilla",
     unitPrice: 50.3,
-    symbol: "🍓",
   },
   {
     id: 2,

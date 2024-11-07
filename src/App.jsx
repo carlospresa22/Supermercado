@@ -19,23 +19,23 @@ function App() {
 
     setMensaje(nuevoMensaje);
 
-    setProductosCarrito((prevProductos) => {
-      const existe = prevProductos.some((item) => item.id === producto.id);
+    setProductosCarrito((agregar) => {
+      const existe = agregar.some((item) => item.id === producto.id);
       return limitados.includes(producto.name) && cantidadActual >= 5
-        ? prevProductos
+        ? agregar
         : existe
-        ? prevProductos.map((item) =>
+        ? agregar.map((item) =>
             item.id === producto.id
               ? { ...item, cantidad: item.cantidad + 1 }
               : item
           )
-        : [...prevProductos, { ...producto, cantidad: 1 }];
+        : [...agregar, { ...producto, cantidad: 1 }];
     });
   }
 
   function eliminarProductoDelCarrito(producto) {
-    setProductosCarrito((prevProductos) =>
-      prevProductos
+    setProductosCarrito((eliminar) =>
+      eliminar
         .map((item) =>
           item.id === producto.id
             ? { ...item, cantidad: item.cantidad - 1 }
